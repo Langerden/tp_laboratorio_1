@@ -6,6 +6,7 @@
 
 int main()
 {
+	setbuf(stdin, NULL);
 //declaro variables del main
     char seguir='y';
     int opcion = 0;
