@@ -7,7 +7,7 @@
 int main()
 {
 	setbuf(stdout, NULL);
-	//declaro variables del main
+	//declaro las variables del main
 	char seguir = 'y';
 	int opcion = 0;
 	float nroA;
@@ -16,8 +16,8 @@ int main()
 	float rtaResta;
 	float rtaDivision;
 	float rtaMultiplicacion;
-	long int factorialA = 0;
-	long int factorialB = 0;
+	int factorialA = 0;
+	int factorialB = 0;
 	int validarNroA = 0;
 	int validarNroB = 0;
 	int validarCalculos = 0;
@@ -81,22 +81,22 @@ int main()
 				}
 				printf("\n D- La multiplicacion de %.2f y %.2f es: %.2f", nroA,nroB, rtaMultiplicacion);
 
-				if (factorialA == 1) {
+				if (factorialA == -1) {
 					//si nroA es cero o un numero negativo muestro un mensaje de error
 					printf(
 							"\n E- ERROR. No se puede calcular el factorial de %.2f\n",nroA);
 				} else {
 					//imprimo el resultado del factorial de nroA si es != de 0 y no es negativo
-					printf("\n E- El factorial de %.2f es: %ld \n", nroA,factorialA);
+					printf("\n E- El factorial de %.2f es: %d \n", nroA,factorialA);
 				}
 
-				if (factorialB == 1) {
+				if (factorialB == -1) {
 					//si nroB es cero o un numero negativo muestro un mensaje de error
 					printf(
 							"F- ERROR. No se puede calcular el factorial de %.2f\n",nroB);
 				} else {
 					//imprimo el resultado del factorial de nroB si es != de 0 y no es negativo
-					printf(" F- El factorial de %.2f es: %ld \n", nroB,factorialB);
+					printf(" F- El factorial de %.2f es: %d \n", nroB,factorialB);
 				}
 
 				system("pause");

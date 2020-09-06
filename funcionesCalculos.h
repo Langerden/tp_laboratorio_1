@@ -48,10 +48,10 @@ float multiplicar (float primerNumero, float segundoNumero, float* pTotal);
  *
  * \param float numeroUsuario Es el parametro del numero que ingresa el usuario.
  *
- * \return Si el numeroUsuario es negativo o vale cero, devuelve 0. En caso de numeroUsuario ser un numero positivo me retorna el valor entero del factorial de numeroUsuario.
+ * \return Si el numeroUsuario es negativo o vale cero, devuelve -1. En caso de numeroUsuario ser un numero positivo me retorna el valor entero del factorial de numeroUsuario.
  */
 
-long int factorial (float numeroUsuario);
+int factorial (float numeroUsuario);
 
 
 #endif // FUNCIONESCALCULOS_H_INCLUDED

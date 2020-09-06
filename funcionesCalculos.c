@@ -24,9 +24,10 @@ float multiplicar (float primerNumero, float segundoNumero, float* pTotal){
     *pTotal = primerNumero * segundoNumero;
     return *pTotal;
 }
-long int factorial (float numeroUsuario)
+
+int factorial (float numeroUsuario)
 {
-    long int resultado = 1;
+	int resultado = -1;
     int numeroInt;
     int i;
 
@@ -34,10 +35,11 @@ long int factorial (float numeroUsuario)
 
     if (numeroInt > 0)
         {
-        for (i = numeroInt; i >= 1; i --)
+    	resultado = numeroInt;
+        for (i = numeroInt-1; i >= 1; i --)
             {
-             resultado = resultado * i;
+        	resultado *= i;
             }
         }
-   return resultado;
+    return resultado;
 }
