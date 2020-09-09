@@ -26,8 +26,8 @@ int main()
 	float rtaResta;
 	float rtaDivision;
 	float rtaMultiplicacion;
-	int factorialA = 0;
-	int factorialB = 0;
+	long int factorialA = 0;
+	long int factorialB = 0;
 	int validarNroA = 0;
 	int validarNroB = 0;
 	int validarCalculos = 0;
@@ -90,7 +90,7 @@ int main()
 							"\n E- ERROR. No se puede calcular el factorial de %.2f\n",nroA);
 				} else {
 					//imprimo el resultado del factorial de nroA si es != de 0 y no es negativo
-					printf("\n E- El factorial de %.2f es: %d \n", nroA,factorialA);
+					printf("\n E- El factorial de %.2f es: %ld \n", nroA,factorialA);
 				}
 
 				if (factorialB == -1) {
@@ -99,7 +99,7 @@ int main()
 							"F- ERROR. No se puede calcular el factorial de %.2f\n",nroB);
 				} else {
 					//imprimo el resultado del factorial de nroB si es != de 0 y no es negativo
-					printf(" F- El factorial de %.2f es: %d \n", nroB,factorialB);
+					printf(" F- El factorial de %.2f es: %ld \n", nroB,factorialB);
 				}
 
 
@@ -121,8 +121,6 @@ int main()
 			printf("Opcion incorrecta.\n");
 			break;
 		}
-
-		system("pause");
 		system("cls");
 	} while (seguir == 'n');
 	return 0;
