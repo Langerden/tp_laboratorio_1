@@ -1,5 +1,16 @@
 #ifndef UTN_GETDATO_H_
 #define UTN_GETDATO_H_
+
+/**
+ * @brief Lee de stdin hasta que encuentra un \n o hasta que haya copiado en cadena un
+ * 		  maximo de 'largo -1' caracteres
+ * @param cadena
+ * @param largo
+ * @return
+ */
+
+int utn_myGets (char* cadena, int largo);
+
 /**
  * @brief Pide un numero al usuario por mensaje.
  * Valida si el numero ingresado esta dentro de los rangos de min y max.
@@ -48,6 +59,21 @@ int utn_getFloat(float* pResultado,char* mensaje,char* msjError,float min, float
 int utn_getChar(char* pResultado,char* mensaje,char* msjError,char min, char max, int reintentos);
 
 int menu();
+
+
+int IsFloat (char* cadena, int largo);
+
+int getInt (int* bufferInt);
+
+int isNumber (char* cadena, int largo);
+int getFloat (float* bufferFloat);
+int isName (char* cadena,int largo);
+void formatName(char* string);
+int utn_getNombre(char* pResultado, int longitud,char* mensaje, char* mensajeError, int reintentos);
+
+
+
+
 
 
 
