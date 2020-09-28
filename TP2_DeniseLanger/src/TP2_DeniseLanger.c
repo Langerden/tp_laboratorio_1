@@ -13,62 +13,67 @@
 #include <ctype.h>
 #include "utn_getDato.h"
 #include "ArrayEmployees.h"
-#define FACTORY_LEN 10
+#define FACTORY_LEN 5
 
 int main(void)
 {
 	setbuf(stdout, NULL);
-	int flagMenu;
-	int idLibre = 2000;
+	int flagMenu = 0;
+	int primerIDEmpelado = 2000;
+	int idLibre = primerIDEmpelado;
 	int subMenu;
-	int opcionMenu;
 	int idUser;
-	float promedioSalario;
+	float promedioSalario = 0;
 	int empleadosArribaPromedio;
 	int totalSalario;
-	char salir = 'y';
+	char salir = 'n';
 	Employee factory[FACTORY_LEN];
 
 	initEmployees(factory, FACTORY_LEN); //Inicializo Array en 1
+
 	do
 	{
-		//fflush(stdin);
-		opcionMenu = menu();
-		switch(opcionMenu)
+		switch( menu())
 		{
 		case 1: //Ingresar un empleado
-			flagMenu = chargeDataEmployee(factory, FACTORY_LEN, &idLibre);
+			if(!chargeDataEmployee(factory, FACTORY_LEN, &idLibre)){
+				flagMenu++;
+			}
 			break;
 		case 2: //Ingresar ID y modificar Nombre, Apellido, Salario o Sector
-			if(!flagMenu)
+			if(flagMenu)
 			{
 				modifyEmployee(factory, FACTORY_LEN);
+
+			}else{
+				printf("Aun no cargaste ningun empleado.\n");
 			}
-			printf("Aun no cargaste ningun empleado.");
 			break;
 		case 3: // Ingresar ID y eliminar empleado
-			if(!flagMenu){
-				utn_getInt(&idUser, "Ingrese el ID a eliminar", "ERROR. Numero invalido, reingrese (Entre XXX y XXX)", 0, 5000, 5);
-				removeEmployee(factory, FACTORY_LEN, idUser);
+			if(flagMenu){
+				printEmployees(factory, FACTORY_LEN);
+				utn_getInt(&idUser, "Escriba el ID del empleado a eliminar: ", "ERROR. ID inexistente.\n",primerIDEmpelado , (idLibre-1), 7);
+				if(!removeEmployee(factory, FACTORY_LEN, idUser)){
+					flagMenu--;
+				}
+			}else{
+				printf("Aun no cargaste ningun empleado.\n");
 			}
-			printf("Aun no cargaste ningun empleado.");
 			break;
 		case 4: // Informar empleados por Apellido / Nombre + Total y Promedio de salarios + Cant empleados salario > Promedio
-			if(!flagMenu)
+			if(flagMenu)
 			{
-			utn_getInt(&subMenu, "Elija el orden a Informar (ASC = 1 / DESC = 0)", "ERROR. Opcion invalida, reingrese el orden (ASC = 1 / DESC = 0)", 0, 1, 5);
-			sortEmployees(factory, FACTORY_LEN, subMenu);
-			calculateAverAndTotalSalary(factory, FACTORY_LEN, &promedioSalario, &totalSalario);
-			}
-			if (promedioSalario > 0)
-			{
-				empleadosArribaPromedio = countMaxAvarangeSalary(factory, FACTORY_LEN, &promedioSalario);
+				utn_getInt(&subMenu, "Elija el orden a Informar (Desc = 2 / Ascen = 1)", "ERROR. Opcion invalida.\n", 1, 2, 5);
+				sortEmployees(factory, FACTORY_LEN, subMenu);
 				printEmployees(factory, FACTORY_LEN);
+				calculateAverAndTotalSalary(factory, FACTORY_LEN, &promedioSalario, &totalSalario);
+				empleadosArribaPromedio = countMaxAvarangeSalary(factory, FACTORY_LEN, &promedioSalario);
 				printf("\nEl total de Salarios registados es: %d", totalSalario);
 				printf("\nEl promedio de los salarios es de %.2f: ", promedioSalario);
-				printf("\nLa cantidad de Empleados que supera el promedio es de %d",empleadosArribaPromedio);
+				printf("\nLa cantidad de Empleados que supera el promedio es de %d\n",empleadosArribaPromedio);
+			}else{
+				printf("Aun no cargaste ningun empleado.\n");
 			}
-			printf("Aun no cargaste ningun empleado.");
 			break;
 		case 5:
 			printf("\n¿Desea salir? Y/N:");
@@ -83,7 +88,8 @@ int main(void)
 			printf("Opcion incorrecta.\n");
 		break;
 		}
-		//system("pause");
+		system("pause");
+		system("cls");
 	}while (salir == 'n');
 	return EXIT_SUCCESS;
 }
