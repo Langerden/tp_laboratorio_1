@@ -75,7 +75,7 @@ int main(void)
 				printf("Aun no cargaste ningun empleado.\n");
 			}
 			break;
-		case 5:
+		case 5: // Salir
 			printf("\n¿Desea salir? Y/N:");
 			fflush(stdin);
 			scanf("%c",&salir);
