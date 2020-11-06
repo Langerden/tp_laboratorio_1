@@ -101,8 +101,6 @@ int main()
 				break;
             case 10: //Salir
             	utn_getChar(&salir,"¿Confirma Salir? (Y/N): " , "ERROR: OPCION NO VALIDA\n", 'N', 'Y', 10);
-            	fflush(stdin);
-            	scanf("%c", &salir);
             	if(salir == 'Y')
             	{
             		ll_deleteLinkedList(listaEmpleados);

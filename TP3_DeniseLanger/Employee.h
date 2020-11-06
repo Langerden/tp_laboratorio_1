@@ -8,7 +8,6 @@ typedef struct
     int sueldo;
 }Employee;
 
-
 /**
  * @brief  Pide memoria con malloc
  * @return Puntero a Employee

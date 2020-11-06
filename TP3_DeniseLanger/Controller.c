@@ -32,13 +32,13 @@ int controller_loadFromBinary(char* path , LinkedList* pArrayListEmployee)
 	pFile = fopen(path, "rb");
 
 	if(pFile != NULL && parser_EmployeeFromBinary(pFile, pArrayListEmployee) == 0)
-		{
-			printf("Archivo cargado con exito\n");
-			retorno = 0;
-		} else
-		{
-			printf("Error al cargar el archivo\n");
-		}
+	{
+		printf("Archivo cargado con exito\n");
+		retorno = 0;
+	} else
+	{
+		printf("Error al cargar el archivo\n");
+	}
 	fclose(pFile);
     return retorno;
 }
@@ -185,6 +185,8 @@ int controller_removeEmployee(LinkedList* pArrayListEmployee)
 			} else {
 				printf("Se cancelo la operacion\n");
 			}
+		} else {
+			printf("No existe un Empleado con el ID: %d\n",auxIDUser);
 		}
 	}
 	return retorno;

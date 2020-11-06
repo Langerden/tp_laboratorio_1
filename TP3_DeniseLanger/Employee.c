@@ -118,10 +118,11 @@ int employee_sortEmployee(LinkedList* pArrayListEmployee)
 				utn_getInt(&orden, "Ingrese el orden (1:ASC / 0:DESC) \n", "ERROR: OPCION NO VALIDA\n", 0, 1,10);
 				printf("Ordenando, aguarde unos minutos :D \n");
 				ll_sort(pArrayListEmployee, employee_sortBySalary, orden);
-				retorno = 1;
+				retorno = 0;
 				break;
 			case 5:
-				printf("Ordenamiento Cancelado con exito\n");
+				printf("Operacion cancelada\n");
+				retorno = 1;
 				break;
 		}
 	}
