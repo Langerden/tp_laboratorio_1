@@ -1,0 +1,41 @@
+id,articulo,medida,precio,rubroId
+1,Lavandina T Ayudin,5 lts,170,2
+2,Lavandina en gel,1 lts,110,2
+3,Detergente T. Magistral,1 lts,170,2
+4,Limpiador cremoso VALENTINA T. Cif,1 lts,140,2
+5,Antigrasa VALESCU,1 lts,130,2
+6,Antihongo de Baño VALESCU,1 lts,119,2
+7,Desodorante NIVEA MEN,1 u,120,3
+8,Desodorante REXONA,1 u,125,3
+9,Desodorante DOVE roll,50 grs,145,3
+10,Shampoo para autos siliconado,500 ml,99,4
+11,Revividor interior/exterior,1 lts,359,4
+12,Lavandina R/Color,1 lts,110,1
+13,Quita Manchas,250 ml,110,1
+14,Jabon blanco ZORRO,1 u,45,1
+15,Jabon blanco ZORRO c/suavizante,1 u,45,1
+16,Jabon blanco SEISEME,1 u,80,1
+17,Lavandina T Ayudin,1 lts,45,2
+18,Bactericida de Piso T. Lisoform,1 lts,50,2
+19,Bactericida de Piso T. Lisoform,5 lts,180,2
+20,Desengrasante Industrial MARY,1 lts,160,2
+21,Limpiavidrios VALESCU,1 lts,100,2
+22,Jabón liquido p/manos Dove,250 ml,110,3
+23,Jabón liquido p/manos Dove,1 lts,130,3
+24,Gel de ducha VALESCU,500 ml,125,3
+25,Jabón de tocador PROTEX,1 u,85,3
+26,Brillo mas teflón,250 ml,200,4
+27,Rejilla auto doble,1 u,110,4
+28,Agua destilada,5 lts,110,4
+29,Liquido refrigerante,5 lts,480,4
+30,Perfume para auto,1 lts,310,4
+31,Suavizante T.Confort/Vivere/Woolite,1 lts,55,Planeta,1
+32,Suavizante T.Confort/Vivere/Woolite,5 lts,220,1
+33,Jabón Líquido T.Ariel,1 lts,95,1
+34,Jabón Líquido T.Ariel,5 lts,390,1
+35,Lavandina R/Blanca,1 lts,90,1
+36,Jabón de tocador Nivea,1 u,60,3
+37,Jabón de tocador Rexona,3 u,140,3
+38,Crema dental COLGATE,70 grs,75,3
+39,Crema dental COLGATE HERBAL,140 grs,160,3
+40,Cepillo de dientes COLGATE,2 u,90,3
